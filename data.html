@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список производителей гитар</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="JavaScript/data.js"></script>
+    <script src="JavaScript/table.js"></script>
+    <script src="JavaScript/filter.js"></script>
+    <script src="JavaScript/sort.js"></script>
+    <script src="JavaScript/main.js"></script>
+</head>
+<body>
+
+    <p align="left">
+        <a href="index.html" title="Главная">Главная</a> |
+        <a href="brand.html" title="Подробно о Fender">Подробно о Fender</a> |
+        <a href="data.html" title="Список производителей гитар">Список производителей гитар</a>
+    </p>
+
+    <hr>
+
+    <div class="controls">
+        <form id="filter">
+            <p>
+                <label for="brand">Бренд:</label>
+                <input type="text" id="brand">
+            </p>
+            <p>
+                <label for="priceCategory">Ценовая категория:</label>
+                <input type="text" id="priceCategory">
+            </p>
+            <p>
+                <label for="genre">Музыкальный жанр:</label>
+                <input type="text" id="genre">
+            </p>
+            <p>
+                <label for="hq">Штаб-квартира:</label>
+                <input type="text" id="hq">
+            </p>
+            <p>
+                <label for="yearFrom">Год основания:</label>
+                от <input type="number" id="yearFrom">
+                до <input type="number" id="yearTo">
+            </p>
+            <p>
+                <label for="priceFrom">Средняя цена:</label>
+                от <input type="number" id="priceFrom">
+                до <input type="number" id="priceTo">
+            </p>
+            <input type="button" value="Найти">
+            <input type="button" value="Очистить фильтры">
+        </form>
+
+        <form id="sort">
+            <p>Сортировать по</p>
+            <p>
+                <select id="fieldsFirst"></select>
+                по убыванию? <input type="checkbox" id="fieldsFirstDesc">
+            </p>
+            <p>
+                <select id="fieldsSecond"></select>
+                по убыванию? <input type="checkbox" id="fieldsSecondDesc">
+            </p>
+            <p>
+                <select id="fieldsThird"></select>
+                по убыванию? <input type="checkbox" id="fieldsThirdDesc">
+            </p>
+            <input type="button" value="Сортировать">
+            <input type="button" value="Сбросить сортировку">
+        </form>
+    </div>
+
+    <table id="list"></table>
+
+</body>
+</html>
